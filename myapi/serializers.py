@@ -6,3 +6,9 @@ class HeroSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Hero
         fields = ('name', 'alias')
+
+
+class LeadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Lead
+        fields = ('id', 'name', 'email', 'message')
